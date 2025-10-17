@@ -11,36 +11,42 @@ import { ScrambleWordsWithReducer } from "./scrambleWordWithReducer/ScrambleWord
 
 const Navbar = () => {
   return (
-    <div className='navBar'>
-      <div className='stocks'>
-        <Link to="/">UseState</Link>
+    <nav className="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+      <div className="hidden sm:ml-6 sm:block">
+        <div className="flex space-x-4">
+
+          <div className="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">
+            <Link to="/">UseState</Link>
+          </div>
+
+          <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
+            <Link to="/use-effect">UseEffect</Link>
+          </div>
+          <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
+            <Link to="/custom-hook">UseEffect CustomHook</Link>
+          </div>
+          <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
+            <Link to="/custom-hook-connection">Pokemon</Link>
+          </div>
+          <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
+            <Link to="/use-ref">Auto focus</Link>
+          </div>
+          <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
+            <Link to="/task-app-use-state">Task app with useState</Link>
+          </div>
+          <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
+            <Link to="/task-app-use-reducer">Task app with useReducer</Link>
+          </div>
+          <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
+            <Link to="/scrambleWords">Scramble Words</Link>
+          </div>
+          <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
+            <Link to="/scrambleWords-with-reducer">Scramble Words With Reducer</Link>
+          </div>
+        </div>
       </div>
-      <div className='favourites'>
-        <Link to="/use-effect">UseEffect</Link>
-      </div>
-      <div className='cart'>
-        <Link to="/custom-hook">UseEffect CustomHook</Link>
-      </div>
-      <div className='cart'>
-        <Link to="/custom-hook-connection">Pokemon</Link>
-      </div>
-      <div className='cart'>
-        <Link to="/use-ref">Auto focus</Link>
-      </div>
-      <div className='cart'>
-        <Link to="/task-app-use-state">Task app with useState</Link>
-      </div>
-      <div className='cart'>
-        <Link to="/task-app-use-reducer">Task app with useReducer</Link>
-      </div>
-      <div className='cart'>
-        <Link to="/scrambleWords">Scramble Words</Link>
-      </div>
-      <div className='cart'>
-        <Link to="/scrambleWords-with-reducer">Scramble Words With Reducer</Link>
-      </div>
-    </div>
-  )
+    </nav>
+  );
 
 }
 
@@ -58,8 +64,8 @@ export const HooksApp = () => {
         <Route path="/use-ref" element={<FocusScreen />} />
         <Route path="/task-app-use-state" element={<TasksAppWithUseState />} />
         <Route path="/task-app-use-reducer" element={<TasksAppWithUseReducer />} />
-        <Route path="/scrambleWords" element={< ScrambleWords/>} />
-        <Route path="/scrambleWords-with-reducer" element={< ScrambleWordsWithReducer/>} />
+        <Route path="/scrambleWords" element={< ScrambleWords />} />
+        <Route path="/scrambleWords-with-reducer" element={< ScrambleWordsWithReducer />} />
       </Routes>
     </div>
   )
