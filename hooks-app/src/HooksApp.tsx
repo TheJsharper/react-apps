@@ -8,6 +8,7 @@ import { TasksAppWithUseState } from "./useRedurcer/TaskAppWithUseState"
 import { TasksAppWithUseReducer } from "./useRedurcer/TaskAppWithUseReducer"
 import { ScrambleWords } from "./scrambleWords/ScrambleWords"
 import { ScrambleWordsWithReducer } from "./scrambleWordWithReducer/ScrambleWordWithReducer"
+import { MemoHook } from "./memo/MemoHook"
 
 const Navbar = () => {
   return (
@@ -43,6 +44,9 @@ const Navbar = () => {
           <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
             <Link to="/scrambleWords-with-reducer">Scramble Words With Reducer</Link>
           </div>
+          <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
+            <Link to="/memo">Memo Hook</Link>
+          </div>
         </div>
       </div>
     </nav>
@@ -66,6 +70,7 @@ export const HooksApp = () => {
         <Route path="/task-app-use-reducer" element={<TasksAppWithUseReducer />} />
         <Route path="/scrambleWords" element={< ScrambleWords />} />
         <Route path="/scrambleWords-with-reducer" element={< ScrambleWordsWithReducer />} />
+        <Route path="/memo" element={< MemoHook />} />
       </Routes>
     </div>
   )
