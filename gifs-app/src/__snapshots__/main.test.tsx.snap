@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`main > should render correctly 1`] = `
+<div>
+  <main />
+</div>
+`;
+
+exports[`main > should work 1`] = `
+<div>
+  <main />
+</div>
+`;

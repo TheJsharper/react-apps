@@ -1,0 +1,192 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`GifsHeader > should display the correct title and description 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      Test Title
+    </h1>
+    <p>
+      Test Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`GifsHeader > should handle empty title and description 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1 />
+    <p />
+  </div>
+</div>
+`;
+
+exports[`GifsHeader > should handle long title and description 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      This is a very long title that should be tested for rendering properly in the GifsHeader component
+    </h1>
+    <p>
+      This is a very long description that should also be tested to ensure that it renders correctly and does not break the layout of the GifsHeader component in any way.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`GifsHeader > should handle numeric title and description 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      1234567890
+    </h1>
+    <p>
+      0987654321
+    </p>
+  </div>
+</div>
+`;
+
+exports[`GifsHeader > should handle special characters in title and description 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      Title with special characters !@#$%^&*()_+
+    </h1>
+    <p>
+      Description with special characters &lt;&gt;?:"{}|~\`
+    </p>
+  </div>
+</div>
+`;
+
+exports[`GifsHeader > should handle title and description with HTML tags 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      &lt;b&gt;Bold Title&lt;/b&gt;
+    </h1>
+    <p>
+      &lt;i&gt;Italic Description&lt;/i&gt;
+    </p>
+  </div>
+</div>
+`;
+
+exports[`GifsHeader > should handle title and description with different casing 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      tItLe wItH diFfErEnT cAsInG
+    </h1>
+    <p>
+      dEsCrIpTiOn wItH diFfErEnT cAsInG
+    </p>
+  </div>
+</div>
+`;
+
+exports[`GifsHeader > should handle title and description with emojis 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      Title with emojis 😊🚀🎉
+    </h1>
+    <p>
+      Description with emojis 👍💡🔥
+    </p>
+  </div>
+</div>
+`;
+
+exports[`GifsHeader > should handle title and description with whitespace 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+         Title with leading and trailing whitespace   
+    </h1>
+    <p>
+         Description with leading and trailing whitespace   
+    </p>
+  </div>
+</div>
+`;
+
+exports[`GifsHeader > should handle title and description with whitespace 2`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+         Title with leading and trailing whitespace   
+    </h1>
+    <p>
+         Description with leading and trailing whitespace   
+    </p>
+  </div>
+</div>
+`;
+
+exports[`GifsHeader > should match snapshot with different props 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      Another Title
+    </h1>
+    <p>
+      Another Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`GifsHeader > should match snapshot with different props title, description 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      Another Title
+    </h1>
+    <p>
+      Another Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`GifsHeader > should render correctly 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      Sample Title
+    </h1>
+    <p>
+      Sample Description
+    </p>
+  </div>
+</div>
+`;
