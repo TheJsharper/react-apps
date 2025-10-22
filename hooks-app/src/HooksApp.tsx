@@ -12,6 +12,9 @@ import { MemoHook } from "./memo/MemoHook"
 import { UseCalbackHook } from "./useCallback/useCallbackHook"
 import { MemoCounter } from "./useMemo/MemoCounter"
 import { InstagromApp } from "./useOptimistic/InstragramApp"
+import { ClientInformation } from "./useSuspense/ClientInformation"
+import { Suspense } from "react"
+import { getUserAction } from "./useSuspense/api/get-user.action"
 
 const Navbar = () => {
   return (
@@ -59,6 +62,9 @@ const Navbar = () => {
           <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
             <Link to="/useOptmistic">UseOptimistic Hook</Link>
           </div>
+          <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
+            <Link to="/useSuspense">UseSuspense Hook</Link>
+          </div>
         </div>
       </div>
     </nav>
@@ -86,6 +92,16 @@ export const HooksApp = () => {
         <Route path="/useCallback" element={< UseCalbackHook />} />
         <Route path="/useMemo" element={< MemoCounter />} />
         <Route path="/useOptmistic" element={< InstagromApp />} />
+        <Route path="/useSuspense" element={<>
+
+          <Suspense  fallback={
+            <div className="bg-gradient flex flex-col">
+               <div className="text-2xl"> Loading...</div> 
+            </div >
+          }>
+            <ClientInformation  getUser={getUserAction(1100)} /> 
+          </Suspense>
+           </>} />
       </Routes>
     </div>
   )
