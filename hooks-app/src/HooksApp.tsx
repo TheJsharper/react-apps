@@ -15,6 +15,7 @@ import { InstagromApp } from "./useOptimistic/InstragramApp"
 import { ClientInformation } from "./useSuspense/ClientInformation"
 import { Suspense } from "react"
 import { getUserAction } from "./useSuspense/api/get-user.action"
+import { ProfessionalApp } from "./useContext/ProfessionalApp"
 
 const Navbar = () => {
   return (
@@ -65,6 +66,9 @@ const Navbar = () => {
           <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
             <Link to="/useSuspense">UseSuspense Hook</Link>
           </div>
+          <div className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white'>
+            <Link to="/useContext">UseContext Hook</Link>
+          </div>
         </div>
       </div>
     </nav>
@@ -94,15 +98,18 @@ export const HooksApp = () => {
         <Route path="/useOptmistic" element={< InstagromApp />} />
         <Route path="/useSuspense" element={<>
 
-          <Suspense  fallback={
+          <Suspense fallback={
             <div className="bg-gradient flex flex-col">
-               <div className="text-2xl"> Loading...</div> 
+              <div className="text-2xl"> Loading...</div>
             </div >
           }>
-            <ClientInformation  getUser={getUserAction(1100)} /> 
+            <ClientInformation getUser={getUserAction(1100)} />
           </Suspense>
-           </>} />
+        </>} />
+        <Route path="/useContext/*" element={< ProfessionalApp />}  />
+        <Route path="*" element={< TrafficLight />}  />
       </Routes>
+
     </div>
   )
 }
