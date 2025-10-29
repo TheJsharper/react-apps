@@ -8,6 +8,7 @@ import { lazy } from "react";
 import { createBrowserRouter } from "react-router";
 
 const SearchPage = lazy(()=>  import('@/heroes/pages/search/SearchPage').then(module => ({ default: module.SearchPage})))
+
 export const appRouter = createBrowserRouter(
     [
 

@@ -16,7 +16,6 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Search, Plus, Zap, Shield, Heart } from "lucide-react"
-//import Image from "next/image"
 
 interface Hero {
   id: string
@@ -157,8 +156,8 @@ export default function HeroPages() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-4">
-      <div className="max-w-7xl mx-auto">
+    <>
+      <>
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">Superhero Database</h1>
@@ -276,7 +275,7 @@ export default function HeroPages() {
           {filteredHeroes.map((hero) => (
             <Card key={hero.id} className="overflow-hidden hover:shadow-lg transition-shadow">
               <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100">
-                <img src={hero.image || "/placeholder.svg"} alt={hero.alias}  className="object-cover" />
+                <img src={hero.image || "/placeholder.svg"} alt={hero.alias} className="object-cover" />
                 <div className="absolute top-2 right-2 flex items-center gap-1 bg-white/90 rounded-full px-2 py-1">
                   <span className={`font-semibold ${getStrengthColor(hero.strength)}`}>{hero.strength}</span>
                   <span className={getStrengthColor(hero.strength)}>{getStrengthIcon(hero.strength)}</span>
@@ -323,7 +322,7 @@ export default function HeroPages() {
             <p className="text-gray-600">Try adjusting your search terms or add a new hero to the database.</p>
           </div>
         )}
-      </div>
-    </div>
+      </>
+    </>
   )
 }
