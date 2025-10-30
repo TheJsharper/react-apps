@@ -16,6 +16,8 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Search, Plus, Zap, Shield, Heart } from "lucide-react"
+import { CustomJumbotron } from "@/components/ui/custom/CustomJumbotron"
+import { HeroStats } from "@/heroes/components/HeroStats"
 
 interface Hero {
   id: string
@@ -159,10 +161,11 @@ export default function HeroPages() {
     <>
       <>
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Superhero Database</h1>
-          <p className="text-gray-600">Discover and manage your favorite superheroes</p>
-        </div>
+        <CustomJumbotron title="Superhero Database"  description="Discover and manage your favorite superheroes"/>
+
+        {/* Stats Dashboard */}
+        <div>HELLLO</div>
+        <HeroStats />
 
         {/* Search and Add Hero Section */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
