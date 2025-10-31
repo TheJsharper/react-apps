@@ -166,6 +166,7 @@ export const HomePage = () => {
 
         {/* Stats Dashboard */}
         <HeroStats />
+        
 
         {/* Search and Add Hero Section */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8">

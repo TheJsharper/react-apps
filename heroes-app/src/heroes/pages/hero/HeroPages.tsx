@@ -164,7 +164,6 @@ export default function HeroPages() {
         <CustomJumbotron title="Superhero Database"  description="Discover and manage your favorite superheroes"/>
 
         {/* Stats Dashboard */}
-        <div>HELLLO</div>
         <HeroStats />
 
         {/* Search and Add Hero Section */}
