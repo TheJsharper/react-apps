@@ -18,6 +18,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search, Plus, Zap, Shield, Heart } from "lucide-react"
 import { CustomJumbotron } from "@/components/ui/custom/CustomJumbotron"
 import { HeroStats } from "@/heroes/components/HeroStats"
+import { useParams } from "react-router"
 
 interface Hero {
   id: string
@@ -94,6 +95,10 @@ const initialHeroes: Hero[] = [
 ]
 
 export default function HeroPages() {
+
+  const {idSlug = ''} = useParams();
+
+  console.log("Id", idSlug)
   const [heroes, setHeroes] = useState<Hero[]>(initialHeroes)
   const [searchTerm, setSearchTerm] = useState("")
   const [isDialogOpen, setIsDialogOpen] = useState(false)
